@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+  
+  /* 全域 border box */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #F1F1F1;
+    background: #ffffffac;
+    z-index: 999;
+}
+.header-bg{
+    margin: 0 auto;
+    max-width: 1296px;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+    position: relative;
+}
+.header-logo{
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+.header-group{
+    display: flex;
+    gap: 40px;
+    padding: 32px 0px;
+}
+
+.header-group li a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.header-group li{
+    padding: 4px 8px;
+}
+.header-sm{
+    display: none;
+}
+
+.header-group li{
+    position: relative;
+    padding: 4px 8px;
+}
+.vector{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+}
+.vector1{    
+    top: 0;
+    left: 0;
+    border-top: 1px solid #919191;
+    border-left: 1px solid #919191;
+    opacity: 0;
+}
+.header-group li:hover .vector1{
+    top: 0;
+    left: 0;
+    border-top: 1px solid #919191;
+    border-left: 1px solid #919191;
+    opacity: 1;
+}
+.vector2{    
+    top: 0;
+    right: 0;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+    opacity: 0;
+}
+.header-group li:hover .vector2{
+    top: 0;
+    right: 0;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+    opacity: 1;
+}
+.vector3{    
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #919191;
+    border-right: 1px solid #919191;
+    opacity: 0;
+}
+.header-group li:hover .vector3{
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #919191;
+    border-right: 1px solid #919191;
+    opacity: 1;
+}
+.vector4{    
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #919191;
+    border-left: 1px solid #919191;
+    opacity: 0;
+}
+.header-group li:hover .vector4{
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #919191;
+    border-left: 1px solid #919191;
+    opacity: 1;
+}
+    
+@media (max-width: 767px){
+    .header-bg{
+        display: none;
+    }
+    .header-sm{
+        margin: 0 auto;
+        display: flex;
+        padding: 8px 12px;
+        justify-content: space-between;
+        align-items: center;
+        background: #FFFFFF;
+    }
+    .btn{
+        width: 40px;
+        height: 40px;
+    }
+    .header-group-sm{
+        display: none;
+    }
+    .header-group{
+        flex-direction: column;
+        gap: 24px;
+        margin: 56px 0;
+        padding: 40px 0px;
+        width: 100%;
+        text-align: center;        
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #FFFFFF;
+    }
+    .header-group li a {
+        font-size: 20px;
+    }
+    .close{
+        display: none;
+    }
+}
+
+.banner-bg{
+    margin: 0 auto;
+    max-width: 100%;
+    background: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 80px 0;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 670px;
+    padding: 59px 71px;
+    gap: 16px;
+    position: relative;
+}
+.quote-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.quote-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.banner-content h3{
+    font-size: 24px;
+    line-height: 1.2;
+    color: #1E1E1E;
+    text-align: center;
+}
+.banner-content h3 strong{
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+.banner-content h3 strong img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: -1;
+}
+.banner-list{
+    display: flex;
+    max-width: 636px;
+    gap: 40px;
+}
+.banner-list li{
+    width: 100%;
+}
+.banner-list h4{
+    color: #5B5B5B;
+    text-align: center;
+    margin-bottom: 4px;
+}
+hr{
+    border: 2px solid #C1C1C1;
+    width: 24px;
+    margin-bottom: 8px;
+}
+.banner-list p{
+    color: #3B3B3B;
+    text-align: center;
+    margin-top: 8px;
+}
+
+@media (max-width: 767px){
+    .banner-bg{
+        padding: 40px 0 80px;
+        gap: 40px;
+    }
+    .banner-content{
+        padding: 64px 37.5px 0 37.5px;
+    }
+    .spanpd1{
+        padding: 0 50px;
+    }
+    .spanpd2{
+        padding: 0 70px;
+    }
+    .quote-left{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .quote-right{
+        display: none;
+    }
+    .banner-list{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.works{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0px;
+    gap: 72px;
+
+}
+.works-list{
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 80px;
+    column-gap: 24px;
+}
+.works-list img{
+    border-radius: 8px;
+    outline: 1px solid #F1F1F1;
+}
+.works-list-content{
+    margin-left: 16px;
+}
+.works-list-content h2{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #3B3B3B;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.works-list-content p{
+    color: #919191;
+    margin-bottom: 24px;
+}
+.works-tags{
+    display: flex;
+    gap: 16px;
+}
+.works-tags li{
+    color: #3B3B3B;
+    background: #F1F1F1;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+.page{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.page a{
+    display: block;
+    font-size: 24px;
+    text-decoration: none;
+    color: #1E1E1E;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 2px 13px;
+}
+.page a:hover{
+    color: #FFFFFF;
+    background: #1E1E1E;
+}
+
+
+.footer-bg{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+    background-size: cover;
+    padding: 80px 0;
+}
+.footer{
+    margin: 0 auto;
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-about{
+    max-width: 686px;
+}
+.footer-about img{
+    width: 120px;
+    height: 54px;
+}
+.footer-about p{
+    font-size: 20px;
+    color: #3B3B3B;
+    margin: 24px 0;
+}
+.footer-about h5{
+    font-size: 20px;
+    line-height: 1.2;
+    color: #919191;
+}
+.footer-social{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footer-social li img{
+    display: inline-block;
+}
+.footer-social li a{
+    width: 306px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 24px;
+    gap: 8px;
+    font-size: 20px;
+    border: 1px solid #C1C1C1;
+    text-decoration: none;
+}
+.bg-black a{
+    color: #FFFFFF;
+    background: #000000;
+}
+.bg-white a{
+    color: #000000;
+    background: #FFFFFF;
+}
+
+@media (max-width: 767px){
+    .works{
+        padding: 80px 12px;
+    }
+    .works-list{
+        display: flex;
+        justify-content: center;
+        row-gap: 48px;
+    }
+    .works-list img{
+        border-radius: 4px;
+        outline: 0.55px solid #F1F1F1;
+    }
+    .works-list-content h2{
+        font-size: 20px;
+    }
+    .works-list-content p{
+        margin-bottom: 16px;
+    }
+    .works-tags {
+        gap: 8px;
+    }
+    .page{
+        margin-top: 48px;
+    }
+
+
+    .footer-bg{
+        padding: 40px 12px;
+    }
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
