@@ -21,10 +21,10 @@ img{
 }
 
 .header{
-    position: sticky;
-    top: 0;
     border-bottom: 1px solid #F1F1F1;
     background: #ffffffac;
+    position: sticky;
+    top: 0;
     z-index: 999;
 }
 .header-bg{
@@ -32,7 +32,6 @@ img{
     max-width: 1296px;
     display: flex;
     justify-content: center;
-    padding: 0 30px;
     position: relative;
 }
 .header-logo{
@@ -46,84 +45,69 @@ img{
     padding: 32px 0px;
 }
 
+/*header-vector效果*/
+.header-group li{
+    padding: 4px 8px;
+    position: relative;
+}
 .header-group li a{
     display: block;
     text-decoration: none;
     color: #000000;
 }
-.header-group li{
-    padding: 4px 8px;
+.header-group li::before,
+.header-group li::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
 }
+.header-group li::before{
+    top: 0;
+    left: 0;
+    border-top: 1px solid #919191;
+    border-left: 1px solid #919191;
+}
+.header-group li::after{
+    top: 0;
+    right: 0;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+}
+.header-group li a::before,
+.header-group li a::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.header-group li a::before{
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #919191;
+    border-left: 1px solid #919191;
+}
+.header-group li a::after{
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #919191;
+    border-right: 1px solid #919191;
+}
+.header-group li:hover::before,
+.header-group li:hover::after,
+.header-group li:hover > a::before,
+.header-group li:hover > a::after{
+    opacity: 1;
+}
+
 .header-sm{
     display: none;
 }
 
-.header-group li{
-    position: relative;
-    padding: 4px 8px;
-}
-.vector{
-    position: absolute;
-    width: 8px;
-    height: 8px;
-}
-.vector1{    
-    top: 0;
-    left: 0;
-    border-top: 1px solid #919191;
-    border-left: 1px solid #919191;
-    opacity: 0;
-}
-.header-group li:hover .vector1{
-    top: 0;
-    left: 0;
-    border-top: 1px solid #919191;
-    border-left: 1px solid #919191;
-    opacity: 1;
-}
-.vector2{    
-    top: 0;
-    right: 0;
-    border-top: 1px solid #919191;
-    border-right: 1px solid #919191;
-    opacity: 0;
-}
-.header-group li:hover .vector2{
-    top: 0;
-    right: 0;
-    border-top: 1px solid #919191;
-    border-right: 1px solid #919191;
-    opacity: 1;
-}
-.vector3{    
-    bottom: 0;
-    right: 0;
-    border-bottom: 1px solid #919191;
-    border-right: 1px solid #919191;
-    opacity: 0;
-}
-.header-group li:hover .vector3{
-    bottom: 0;
-    right: 0;
-    border-bottom: 1px solid #919191;
-    border-right: 1px solid #919191;
-    opacity: 1;
-}
-.vector4{    
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid #919191;
-    border-left: 1px solid #919191;
-    opacity: 0;
-}
-.header-group li:hover .vector4{
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid #919191;
-    border-left: 1px solid #919191;
-    opacity: 1;
-}
-    
 @media (max-width: 767px){
     .header-bg{
         display: none;
@@ -144,16 +128,19 @@ img{
         display: none;
     }
     .header-group{
+        /* background: #FFFFFF; */        
+        background: #F5F5F5;
+        border-top: 1px solid #F1F1F1;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 24px;
         margin: 56px 0;
         padding: 40px 0px;
         width: 100%;
-        text-align: center;        
         position: fixed;
         top: 0;
         left: 0;
-        background: #FFFFFF;
     }
     .header-group li a {
         font-size: 20px;
@@ -423,5 +410,13 @@ hr{
         flex-direction: column;
         align-items: center;
         gap: 24px;
+    }
+    .footer-about p{
+        font-size: 16px;
+        line-height: 1.63;
+    }
+    .footer-about h5{
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
